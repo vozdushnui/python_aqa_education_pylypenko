@@ -1,0 +1,32 @@
+def list_benefits():
+    return ["More organized code", "More readable code", "Easier code reuse", "Allowing programmers to share and connect code together"]
+
+def build_sentence(benefit):
+    print(f'{benefit} is a benefit of functions!')
+
+x = list_benefits()
+for i in x:
+    benefit = i
+    build_sentence(benefit)
+
+
+# edit the functions prototype and implementation
+def foo(first, second, third, *therest):
+    return len(list(therest))
+
+def bar(first, second, third, **options):
+    if options.get("magicnumber") == 7:
+        return True
+    else:
+        return False
+
+
+# test code
+if foo(1, 2, 3, 4) == 1:
+    print("Good.")
+if foo(1, 2, 3, 4, 5) == 2:
+    print("Better.")
+if bar(1, 2, 3, magicnumber=6) == False:
+    print("Great.")
+if bar(1, 2, 3, magicnumber=7) == True:
+    print("Awesome!")
